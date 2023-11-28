@@ -1,16 +1,16 @@
-import getSpecial from '../Undead';
+import getSpecial from '../app';
 
-text('function getSpecial with description', () => {
+test('function getSpecial with description', () => {
   const pers = {
     special: [
+      // {
+      //   id: 8,
+      //   name: "Двойной выстрел",
+      //   icon: "http:/",
+      //   description: "Двойной выстрел наносит двойной урон",
+      // },
       {
-        id: 1,
-        name: 'Двойной выстрел',
-        icon: 'http:/',
-        description: 'Двойной выстрел наносит двойной урон',
-      },
-      {
-        id: 2,
+        id: 9,
         name: 'Накаутирующий удар',
         icon: 'http:/',
       },
@@ -18,14 +18,14 @@ text('function getSpecial with description', () => {
   };
 
   expect(getSpecial(pers)).toEqual([
+    // {
+    //   id: 8,
+    //   name: "Двойной выстрел",
+    //   icon: "http:/",
+    //   description: "Двойной выстрел наносит двойной урон",
+    // },
     {
-      id: 1,
-      name: 'Двойной выстрел',
-      icon: 'http:/',
-      description: 'Двойной выстрел наносит двойной урон',
-    },
-    {
-      id: 2,
+      id: 9,
       name: 'Накаутирующий удар',
       icon: 'http:/',
       description: 'Описание недоступно',

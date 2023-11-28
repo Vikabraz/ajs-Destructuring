@@ -1,1 +1,3 @@
-import Undead from './js/Undead';
+import getSpecial from './js/app';
+
+getSpecial();
