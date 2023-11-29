@@ -1,6 +1,6 @@
 const character = {
-  name: 'Лучник',
-  type: 'Bowman',
+  name: "Лучник",
+  type: "Bowman",
   health: 50,
   level: 3,
   attack: 40,
@@ -8,26 +8,25 @@ const character = {
   special: [
     {
       id: 8,
-      name: 'Двойной выстрел',
-      icon: 'http://...',
-      description: 'Двойной выстрел наносит двойной урон',
+      name: "Двойной выстрел",
+      icon: "http://...",
+      description: "Двойной выстрел наносит двойной урон",
     },
     {
       id: 9,
-      name: 'Нокаутирующий удар',
-      icon: 'http://...',
+      name: "Нокаутирующий удар",
+      icon: "http://...",
       // <- обратите внимание, описание "засекречено"
     },
   ],
 };
 
-export default function getSpecial(pers) {
+export default function getSpecial({ special }) {
   const res = [];
-  const { special } = pers;
 
   for (let i = 0; i < special.length; i += 1) {
-    if (!special[i].descripton) {
-      special[i].description = 'Описание недоступно';
+    if (!special[i].description) {
+      special[i].description = "Описание недоступно";
     }
     res.push({
       id: special[i].id,
